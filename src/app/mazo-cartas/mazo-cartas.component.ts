@@ -9,6 +9,7 @@ export class MazoCartasComponent implements OnInit {
 
   csvData: any[] = [];
   sacadas: any[] = [];
+  isGirada: boolean = false;
   
   constructor() {
 
@@ -56,6 +57,12 @@ export class MazoCartasComponent implements OnInit {
     let random = Math.floor(Math.random() * 99);
     this.resultadoCarta = this.csvData[random].pregunta;
 
+  }
+
+
+  girarTarjeta() {
+    this.isGirada = !this.isGirada;
+    if (this.isGirada) { this.obtenerCarta() };
   }
 
 

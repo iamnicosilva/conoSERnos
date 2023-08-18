@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../assets/fonts/Comfortaa-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+
 .body-container {
     height: 100%;
     width: 100%;
@@ -7,6 +15,7 @@
     background-size: cover;
     min-width: fit-content;
     min-height: fit-content;
+    font-family: 'Comfortaa' ,sans-serif;
 }
 
 div.imgLogoContainer {
