@@ -1,15 +1,8 @@
-/* button.botonNuevaCarta {
-    background-color: #0B5A85;
-    border: none;
-    color: #7FE0F7;
-} */
-
-
-
 
 
 .wrap{
 	width: fit-content;
+	overflow: hidden;
 	margin: 10px auto;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -88,3 +81,9 @@
 	background-size: cover;
 }
 
+@media screen and (max-width: 300px) {
+	.tarjeta{
+		width: 125px;
+		height: 80px;
+	}	
+}

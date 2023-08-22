@@ -1,6 +1,6 @@
   <div class="wrap">
-		<div class="tarjeta-wrap">
-			<div [ngClass]="{'tarjeta': true, 'girada': isGirada}" (click)="girarTarjeta()">
+		<div class="tarjeta-wrap row">
+			<div class="tarjeta col-sm-12 col-md-6 mx-auto" [ngClass]="{'tarjeta': true, 'girada': isGirada}" (click)="girarTarjeta()">
 				<div class="adelante card1"></div>
 				<div class="atras">
 					<p>{{ resultadoCarta }}</p>
