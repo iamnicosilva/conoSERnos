@@ -1,0 +1,8 @@
+barra spinner temporizador
+sistema de usuarios
+contador de cartas
+logo texteado
+otros mazos
+otro sitio navegable
+función regresar
+
