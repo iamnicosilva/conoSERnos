@@ -10,6 +10,9 @@ export class MazoCartasComponent implements OnInit {
   csvData: any[] = [];
   sacadas: any[] = [];
   isGirada: boolean = false;
+  progressValue = 0;
+  interval: any;
+  spinnerColor:string = '#0B5A85';
   
   constructor() {
 
@@ -56,13 +59,30 @@ export class MazoCartasComponent implements OnInit {
   obtenerCarta() {
     let random = Math.floor(Math.random() * 99);
     this.resultadoCarta = this.csvData[random].pregunta;
+    this.startProgress();
 
   }
 
 
   girarTarjeta() {
     this.isGirada = !this.isGirada;
-    if (this.isGirada) { this.obtenerCarta() };
+    if (this.isGirada) {
+      this.obtenerCarta();
+     };
+  }
+
+  
+  startProgress() {
+    this.progressValue = 0;
+    clearInterval(this.interval);
+    this.interval = setInterval(() => {
+      this.progressValue += 1;
+      if (this.progressValue >= 100) {
+        if (this.isGirada){
+          this.girarTarjeta();
+        }
+      }
+    }, 100); // 100ms interval for 10 seconds
   }
 
 

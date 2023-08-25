@@ -1,14 +1,13 @@
-  <div class="wrap">
-		<div class="tarjeta-wrap row">
+  <div class="wrap mb-5">
+		<div class="tarjeta-wrap row ">
 			<div class="tarjeta col-sm-12 col-md-6 mx-auto" [ngClass]="{'tarjeta': true, 'girada': isGirada}" (click)="girarTarjeta()">
 				<div class="adelante card1"></div>
-				<div class="atras">
-					<p>{{ resultadoCarta }}</p>
+				<div class="atras row">
+					<p class="textoCarta col-12">{{ resultadoCarta }}</p>
+					<mat-progress-spinner class="progressSpinner col-12" [color]=spinnerColor [value]=progressValue [diameter]="30" >
+					</mat-progress-spinner>
 				</div>
 			</div>
 		</div>
   </div>
 
-  <!-- <div class="container d-flex justify-content-center">
-    <button (click)="obtenerCarta()" class="botonNuevaCarta mx-auto btn btn-primary" >Nueva carta</button>
-  </div> -->

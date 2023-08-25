@@ -1,4 +1,13 @@
 
+p.textoCarta {
+	user-select:none;
+	margin-bottom: 0px;
+}
+
+mat-progress-spinner.progressSpinner {
+	width: 35px;
+	color: #0B5A85;
+}
 
 .wrap{
 	width: fit-content;
@@ -83,7 +92,11 @@
 
 @media screen and (max-width: 300px) {
 	.tarjeta{
-		width: 125px;
-		height: 80px;
+		width: 175px;
+		height: 112px;
 	}	
+	p.textoCarta {
+		font-size: x-small;
+		padding: 0 3px;
+	}
 }
